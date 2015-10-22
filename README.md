@@ -50,7 +50,7 @@ The output is a list of Erlang tuples containing the lexical tokens and values.
 
 ## Next Steps
 
-1. Write a sequential parser, `erlparse()`. The tough part is coming up with an Erlang representation of the grammar tha wil support step three below.
+1. Write a sequential parser, `erlparse()`. The tough part is coming up with an Erlang representation of  LL grammars that can support step three below.
 2. Write a parallel `erlex()`, called `perlex()`, that can maintain the proper sequence of token tuples.
 3. Write a parellel parser, called `perlparse()`. Make it general enough to either generate p-code or dynamically execute the code. Support streaming lexical tokens from either `erlex()` or `perlex()` to the parser.
 4. Define the sequential versons as a behavior, `gen_erlparse,` with callbacks.
