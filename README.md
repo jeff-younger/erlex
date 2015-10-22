@@ -1,6 +1,15 @@
 # erlex
 Simple erlang lexical analyzer.
 
+## Background
+
+I've been kicking around the idea of creating custom LL(1) languages within Erlang. The idea is to create a kind of domain specific language:
+
+* completely specified in Erlang code, and
+* executable in an Erlang process.
+
+This is my first take on it.
+
 ## Description
 
 `erlex()` takes executable code in the form of a string and a lexical specification defined as a list of tuples:
@@ -52,6 +61,6 @@ The output is a list of Erlang tuples containing the lexical tokens and values.
 
 1. Write a sequential parser, `erlparse()`. The tough part is coming up with an Erlang representation of  LL grammars that can support step three below.
 2. Write a parallel `erlex()`, called `perlex()`, that can maintain the proper sequence of token tuples.
-3. Write a parellel parser, called `perlparse()`. Make it general enough to either generate p-code or dynamically execute the code. Support streaming lexical tokens from either `erlex()` or `perlex()` to the parser.
+3. Write a parallel parser, called `perlparse()`. Make it general enough to either generate p-code or dynamically execute the code. Support streaming lexical tokens from either `erlex()` or `perlex()` to the parser.
 4. Define the sequential versons as a behavior, `gen_erlparse,` with callbacks.
 5. Define the parallel version as a behavior, `gen_perlparse`, with callbacks.
