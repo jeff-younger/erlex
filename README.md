@@ -51,7 +51,7 @@ test_number_to_value(S) ->
 	I.
 ```
 
-The output is a list of Erlang tuples containing the lexical tokens and values.
+The output is a list of Erlang tuples containing the lexical token, the token string, and token value.
 
 ```Erlang
 [{number,"1",1},{number,"2",2},{add,"+","+"},{divide,"/","/"},{number,"3",3},{exponentiate,"^","^"},{number,"2",2}]
